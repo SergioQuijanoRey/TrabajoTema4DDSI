@@ -33,5 +33,7 @@ install:
 	pipenv install
 
 run:
-	@echo "No estamos haciendo nada"
+	@echo "Lanzando la aplicacion"
+	docker start mongoddsi
+	pipenv run python3 src/main.py
 
