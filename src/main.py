@@ -42,7 +42,7 @@ class MongoDatabase:
             "Santander",
             "Malaga",
             "Linares",
-            "Esta tampoco"
+            "Jodar"
         ]
 
         client_dni = [
@@ -65,11 +65,12 @@ class MongoDatabase:
     def select_client_given_city(self, input_city: str):
         """Selecciona los clientes de una determinada ciudad"""
 
-        return self.db.clientes.find_one({'city': input_city})
+        return self.db.clientes.find({'city': input_city})
 
-
-
-
+    def print_query_result(self, query_result):
+        """Muestra de buena forma un resultado de una consulta"""
+        for result in query_result:
+            print(result)
 
 
 if __name__ == "__main__":
@@ -87,4 +88,4 @@ if __name__ == "__main__":
     # Hacemos unas cuantas consultas de prueba sobre los datos insertados
     print("Los clientes de Santander son:")
     print("=" * 80)
-    pprint(mongo.select_client_given_city("Santander"))
+    mongo.print_query_result(mongo.select_client_given_city("Santander"))
