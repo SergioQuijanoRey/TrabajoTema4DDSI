@@ -1,4 +1,4 @@
-import MongoDatabase from MongoDatabase
+from MongoDatabase import MongoDatabase
 
 class entradas(MongoDatabase):
     def crear_entradas(self):
@@ -7,7 +7,7 @@ class entradas(MongoDatabase):
         """
         id_entrada = [1,2,3]
 
-        id_actividad = [1,2,3]        ]
+        id_actividad = [1,2,3]
 
         cantidad = [1,2,1]
 
@@ -19,10 +19,10 @@ class entradas(MongoDatabase):
 
         for index in range(len(id_entrada)):
             entradas_data = {
-                'id_entrada': id_entrada[index]
-                'id_actividad': id_actividad[index]
-                'cantidad': cantidad[index]
-                'devolucion' : devolucion[index]
+                'id_entrada': id_entrada[index],
+                'id_actividad': id_actividad[index],
+                'cantidad': cantidad[index],
+                'devolucion' : devolucion[index],
             }
 
             result = self.db.entradas.insert_one(entradas_data)
