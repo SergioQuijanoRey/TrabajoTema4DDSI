@@ -1,4 +1,4 @@
-from main import MongoDatabase 
+from main import MongoDatabase
 
 class UsarEntradas(MongoDatabase):
     def insert_usar_entrada():
@@ -29,4 +29,4 @@ class UsarEntradas(MongoDatabase):
                 'id_entrada' : id_ent[index]
             }
 
-        result = self.db.usar_entradas.insert_one(usar_data)
+            result = self.db.usar_entradas.insert_one(usar_data)
