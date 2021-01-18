@@ -1,13 +1,14 @@
 from MongoDatabase import MongoDatabase
 
 #======================= ACTIVIDADES ===========================
-class Activity(MongoDatabase):
+class Actividades(MongoDatabase):
 
     def insert_activity_data(self):
         """
         Insertamos datos en una coleccion 'Actividades'
         """
         # Datos ficticios sobre las actividades
+        # TODO -- esto deberian ser enteros
         id_actividad = [
             "Actividad 1",
             "Actividad 2",

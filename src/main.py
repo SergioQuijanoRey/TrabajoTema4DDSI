@@ -1,9 +1,12 @@
 from usar import UsarEntradas
-from MongoDatabase import MongoDatabase
 from pprint import pprint
-from Asistentes import Asistentes
 
+
+
+from MongoDatabase import MongoDatabase
+from Asistentes import Asistentes
 from Entradas import Entradas
+from Actividades import Actividades
 
 if __name__ == "__main__":
     mongo = MongoDatabase()
@@ -32,4 +35,15 @@ if __name__ == "__main__":
     print("Los asistentes que tienen covid son ")
     print("=" * 80)
     mongo.print_query_result(asistentesdb.select_assistant_with_covid())
+    print("")
+
+    # Insertamos los datos de las actividades
+    actividadesdb = Actividades()
+    actividadesdb.insert_activity_data()
+
+    # Mostramos una actividad
+    id_actividad = "Actividad 1"
+    print(f"Mostrando la actividad con identificador {id_actividad}")
+    print("=" * 80)
+    mongo.print_query_result(actividadesdb.select_activity_given_id(id_actividad))
     print("")
