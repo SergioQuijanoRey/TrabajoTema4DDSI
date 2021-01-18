@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 from pprint import pprint
-
+from usar import UsarEntradas
 class MongoDatabase:
     """Clase quwe representa la base de datos de MongoDB"""
 
@@ -174,3 +174,6 @@ if __name__ == "__main__":
     print("="*80)
     print("Los asistentes que tienen covid son ")
     mongo.print_query_result(mongo.select_assistant_with_covid())
+
+    usar_entradasdb = UsarEntradas()
+    usar_entradas.insert_usar_entrada()
