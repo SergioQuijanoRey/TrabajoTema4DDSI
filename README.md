@@ -6,7 +6,7 @@
 * [x] Crear un Makefile para que todo el mundo pueda ejecutar las prácticas
 * [x] Crear un entorno de ejecución básico para MongoDB
 * [x] Elegir las tablas que copiar de la práctica: entre todos
-* [ ] Crear Docker para python porque Jesus no lo ejecuta bien: Sergio
+* [x] Crear Docker para python porque Jesus no lo ejecuta bien: Sergio
 * [ ] Crear un par de estructuras de datos en MongoDB
 * [ ] Insertar una serie de datos sobre las anteriores estructuras
 * [ ] Otras operaciones sobre los datos
