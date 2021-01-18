@@ -139,7 +139,7 @@ class MongoDatabase:
         """Selecciona los clientes dado el dni """
 
         return self.db.assistant.find({'dni': input_dni})
-    
+
     def select_assistant_with_covid(self):
         """Selecciona los clientes dado el dni """
 
