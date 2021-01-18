@@ -1,6 +1,7 @@
 from MongoDatabase import MongoDatabase
 
 class UsarEntradas(MongoDatabase):
+    # TODO -- falta alguna que otra funcionalidad
     def insert_usar_entrada(self):
         """
         Insertamos datos en UsarEntradas

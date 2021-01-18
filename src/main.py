@@ -1,20 +1,11 @@
-from usar import UsarEntradas
-from pprint import pprint
-
-
-
 from MongoDatabase import MongoDatabase
 from Asistentes import Asistentes
 from Entradas import Entradas
 from Actividades import Actividades
+from UsarEntradas import UsarEntradas
 
 if __name__ == "__main__":
     mongo = MongoDatabase()
-
-
-
-    usar_entradasdb = UsarEntradas()
-    usar_entradasdb.insert_usar_entrada()
 
     # Insercion de datos de las entradas
     entradasdb = Entradas()
@@ -47,3 +38,7 @@ if __name__ == "__main__":
     print("=" * 80)
     mongo.print_query_result(actividadesdb.select_activity_given_id(id_actividad))
     print("")
+
+    # Insertamos uso de entradas
+    usar_entradasdb = UsarEntradas()
+    usar_entradasdb.insert_usar_entrada()
