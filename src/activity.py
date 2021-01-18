@@ -61,7 +61,7 @@ class Activity(MongoDatabase):
             result = self.db.activity.insert_one(activity_data)
 
     def select_activity_given_id(self, input_actividad: str):
-        """Selecciona los clientes dado el dni """
+        """Selecciona la actividad dado el id """
 
         return self.db.activity.find({'id_actividad': input_actividad})
 
