@@ -25,4 +25,4 @@ class entradas(MongoDatabase):
                 'devolucion' : devolucion[index]
             }
 
-            result = self.db.entradas.insert_one(client_data)
+            result = self.db.entradas.insert_one(entradas_data)
