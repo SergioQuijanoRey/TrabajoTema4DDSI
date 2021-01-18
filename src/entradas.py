@@ -1,7 +1,7 @@
-import MongoDatabase from main
+import MongoDatabase from MongoDatabase
 
 class entradas(MongoDatabase):
-    def crear_entradas():
+    def crear_entradas(self):
         """
         Datos sobre las entradas
         """

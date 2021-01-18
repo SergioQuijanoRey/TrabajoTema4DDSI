@@ -1,7 +1,7 @@
-from main import MongoDatabase
+from MongoDatabase import MongoDatabase
 
 #======================= ACTIVIDADES ===========================
-class Activity(MongoDatabase): 
+class Activity(MongoDatabase):
 
     def insert_activity_data(self):
         """
@@ -55,7 +55,7 @@ class Activity(MongoDatabase):
                 'id_actividad': id_actividad[index],
                 'descripcion': description[index],
                 'fecha': date[index],
-       
+
             }
 
             result = self.db.activity.insert_one(activity_data)
@@ -65,4 +65,4 @@ class Activity(MongoDatabase):
 
         return self.db.activity.find({'id_actividad': input_actividad})
 
-    
+

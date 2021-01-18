@@ -1,7 +1,7 @@
-from main import MongoDatabase
+from MongoDatabase import MongoDatabase
 
 class UsarEntradas(MongoDatabase):
-    def insert_usar_entrada():
+    def insert_usar_entrada(self):
         """
         Insertamos datos en UsarEntradas
         """
