@@ -1,0 +1,11 @@
+FROM python:3.9
+
+# Instalacion de paquetes
+RUN pip install pymongo
+
+# Copiamos el codigo
+WORKDIR /code
+COPY ./ /code
+
+# Comando a lanzar
+CMD ["python", "/code/src/main.py"]
