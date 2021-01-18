@@ -29,4 +29,4 @@ class UsarEntradas(MongoDatabase):
                     'id_entrada' : id_ent[index]
                 }
 
-            result = self.db.usar_entradas.insert_one(client_data)
+            result = self.db.usar_entradas.insert_one(usar_data)
