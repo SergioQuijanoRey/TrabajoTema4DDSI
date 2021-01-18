@@ -7,8 +7,8 @@
 * [x] Crear un entorno de ejecución básico para MongoDB
 * [x] Elegir las tablas que copiar de la práctica: entre todos
 * [x] Crear Docker para python porque Jesus no lo ejecuta bien: Sergio
-* [ ] Crear un par de estructuras de datos en MongoDB
-* [ ] Insertar una serie de datos sobre las anteriores estructuras
+* [x] Crear un par de estructuras de datos en MongoDB
+* [x] Insertar una serie de datos sobre las anteriores estructuras
 * [ ] Otras operaciones sobre los datos
 * [ ] Redactar documento PDF
 
