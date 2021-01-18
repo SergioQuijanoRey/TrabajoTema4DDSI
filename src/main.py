@@ -8,17 +8,7 @@ from Entradas import Entradas
 if __name__ == "__main__":
     mongo = MongoDatabase()
 
-    # Hacemos una consulta de los asistentes
-    asistentesdb = Asistentes()
-    asistentesdb.insert_assistant_data()
 
-    dni = "0000003k"
-    print(f"El asistente con dni {dni} es: " )
-    asistentesdb.print_query_result(asistentesdb.select_assistant_given_dni(dni))
-
-    print("="*80)
-    print("Los asistentes que tienen covid son ")
-    mongo.print_query_result(asistentesdb.select_assistant_with_covid())
 
     usar_entradasdb = UsarEntradas()
     usar_entradasdb.insert_usar_entrada()
@@ -27,3 +17,19 @@ if __name__ == "__main__":
     entradasdb = Entradas()
     entradasdb.crear_entradas()
 
+    # Insercion de datos de asistentes
+    asistentesdb = Asistentes()
+    asistentesdb.insert_assistant_data()
+
+    # Hacemos una consulta sobre la coleccion de asistentes
+    dni = "0000003k"
+    print(f"El asistente con dni {dni} es: " )
+    print("=" * 80)
+    asistentesdb.print_query_result(asistentesdb.select_assistant_given_dni(dni))
+    print("")
+
+    # Hacemos otra consulta sobre asistentes con COVID
+    print("Los asistentes que tienen covid son ")
+    print("=" * 80)
+    mongo.print_query_result(asistentesdb.select_assistant_with_covid())
+    print("")
