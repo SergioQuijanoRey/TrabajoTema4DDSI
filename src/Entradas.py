@@ -1,6 +1,7 @@
 from MongoDatabase import MongoDatabase
 
-class entradas(MongoDatabase):
+class Entradas(MongoDatabase):
+    # TODO -- alguna sentencia adicional
     def crear_entradas(self):
         """
         Datos sobre las entradas
@@ -26,3 +27,4 @@ class entradas(MongoDatabase):
             }
 
             result = self.db.entradas.insert_one(entradas_data)
+

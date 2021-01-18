@@ -1,8 +1,9 @@
 from usar import UsarEntradas
-from entradas import entradas
 from MongoDatabase import MongoDatabase
 from pprint import pprint
 from Asistentes import Asistentes
+
+from Entradas import Entradas
 
 if __name__ == "__main__":
     mongo = MongoDatabase()
@@ -21,5 +22,8 @@ if __name__ == "__main__":
 
     usar_entradasdb = UsarEntradas()
     usar_entradasdb.insert_usar_entrada()
-    entradasdb = entradas()
+
+    # Insercion de datos de las entradas
+    entradasdb = Entradas()
     entradasdb.crear_entradas()
+
