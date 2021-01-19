@@ -44,9 +44,9 @@ if __name__ == "__main__":
     usar_entradasdb.insert_usar_entrada()
     usar_entradasdb.erase("0000000k")
 
-    print(f"Vamos a ver que la entrada ha sido borrada")
+    print(f"Despues de borrar entrada")
     print("=" * 80)
-    mongo.print_query_result(usar_entradasdb.select_entrada_given_dni("0000000k"))
+    usar_entradasdb.mostrar_todos()
 
     # Modificamos la cuenta bancaria de los asistentes con covid
     # Mostramos el cambio de los asistentes durante el proceso

@@ -40,3 +40,8 @@ class UsarEntradas(MongoDatabase):
 
         return self.db.usar_entradas.find({'dni_asistente': input_dni})
 
+    def mostrar_todos(self):
+        """Muestra toda la informacion de la base de datos"""
+        resultados = self.db.usar_entradas.find()
+        for resultado in resultados:
+            print(resultado)
