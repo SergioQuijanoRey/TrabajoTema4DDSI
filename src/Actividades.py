@@ -10,16 +10,16 @@ class Actividades(MongoDatabase):
         # Datos ficticios sobre las actividades
         # TODO -- esto deberian ser enteros
         id_actividad = [
-            "Actividad 1",
-            "Actividad 2",
-            "Actividad 3",
-            "Actividad 4",
-            "Actividad 5",
-            "Actividad 6",
-            "Actividad 7",
-            "Actividad 8",
-            "Actividad 9",
-            "Actividad 10"
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
         ]
 
         description = [
@@ -61,7 +61,7 @@ class Actividades(MongoDatabase):
 
             result = self.db.activity.insert_one(activity_data)
 
-    def select_activity_given_id(self, input_actividad: str):
+    def select_activity_given_id(self, input_actividad: int):
         """Selecciona la actividad dado el id """
 
         return self.db.activity.find({'id_actividad': input_actividad})

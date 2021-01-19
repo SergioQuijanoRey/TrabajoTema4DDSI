@@ -33,7 +33,7 @@ if __name__ == "__main__":
     actividadesdb.insert_activity_data()
 
     # Mostramos una actividad
-    id_actividad = "Actividad 1"
+    id_actividad = 1
     print(f"Mostrando la actividad con identificador {id_actividad}")
     print("=" * 80)
     mongo.print_query_result(actividadesdb.select_activity_given_id(id_actividad))
@@ -42,3 +42,15 @@ if __name__ == "__main__":
     # Insertamos uso de entradas
     usar_entradasdb = UsarEntradas()
     usar_entradasdb.insert_usar_entrada()
+
+    # Modificamos la cuenta bancaria de los asistentes con covid
+    # Mostramos el cambio de los asistentes durante el proceso
+    print("Antes de modificar los asistentes son: ")
+    print("=" * 80)
+    asistentesdb.mostrar_todos()
+    print("")
+
+    print("Despues de modificar, los asistentes son:")
+    print("=" * 80)
+    asistentesdb.erase_bank_account_assistant_with_covid()
+    asistentesdb.mostrar_todos()
