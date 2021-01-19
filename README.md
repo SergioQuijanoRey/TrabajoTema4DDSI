@@ -9,7 +9,7 @@
 * [x] Crear Docker para python porque Jesus no lo ejecuta bien: Sergio
 * [x] Crear un par de estructuras de datos en MongoDB
 * [x] Insertar una serie de datos sobre las anteriores estructuras
-* [ ] Limpiar TODOs del codigo
+* [x] Limpiar TODOs del codigo
 * [x] Otras operaciones sobre los datos
 * [x] Redactar documento PDF
 

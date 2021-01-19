@@ -1,7 +1,6 @@
 from MongoDatabase import MongoDatabase
 
 class UsarEntradas(MongoDatabase):
-    # TODO -- falta alguna que otra funcionalidad
     def insert_usar_entrada(self):
         """
         Insertamos datos en UsarEntradas
@@ -31,7 +30,7 @@ class UsarEntradas(MongoDatabase):
             }
 
             result = self.db.usar_entradas.insert_one(usar_data)
-    
+
     def erase(self, dni: str):
         self.db.usar_entradas.remove({'dni_asistente': dni})
 
