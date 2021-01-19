@@ -10,8 +10,8 @@
 * [x] Crear un par de estructuras de datos en MongoDB
 * [x] Insertar una serie de datos sobre las anteriores estructuras
 * [ ] Limpiar TODOs del codigo
-* [ ] Otras operaciones sobre los datos
-* [ ] Redactar documento PDF
+* [x] Otras operaciones sobre los datos
+* [x] Redactar documento PDF
 
 ## Esquema
 
