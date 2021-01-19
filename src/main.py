@@ -42,3 +42,8 @@ if __name__ == "__main__":
     # Insertamos uso de entradas
     usar_entradasdb = UsarEntradas()
     usar_entradasdb.insert_usar_entrada()
+    usar_entradasdb.erase("0000000k")
+
+    print(f"Vamos a ver que la entrada ha sido borrada")
+    print("=" * 80)
+    mongo.print_query_result(usar_entradasdb.select_entrada_given_dni("0000000k"))

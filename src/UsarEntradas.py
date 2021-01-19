@@ -31,3 +31,12 @@ class UsarEntradas(MongoDatabase):
             }
 
             result = self.db.usar_entradas.insert_one(usar_data)
+    
+    def erase(self, dni: str):
+        self.db.usar_entradas.remove({'dni_asistente': dni})
+
+    def select_entrada_given_dni(self, input_dni):
+        """Selecciona las entradas dado el dni """
+
+        return self.db.usar_entradas.find({'dni_asistente': input_dni})
+
