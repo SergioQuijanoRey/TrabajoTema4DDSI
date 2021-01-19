@@ -72,3 +72,17 @@ class Asistentes(MongoDatabase):
         """Selecciona los clientes dado el dni """
 
         return self.db.assistant.find({'covid': True})
+
+    def erase_bank_account_assistant_with_covid(self):
+        """Modifica la cuenta bancaria de los asistentes que tengan COVID"""
+        self.db.assistant.update_many(
+            {'covid': True},
+            {'$set': {'bank_account': 'No longer available'}}
+        )
+
+    def mostrar_todos(self):
+        """Muestra toda la informacion de la base de datos"""
+        resultados = self.db.assistant.find()
+        for resultado in resultados:
+            print(resultado)
+
